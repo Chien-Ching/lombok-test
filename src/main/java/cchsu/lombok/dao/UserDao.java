@@ -11,8 +11,5 @@ import java.util.List;
 // TODO make it as a really DAO
 public class UserDao {
     private List<User> users = new ArrayList<User>();
-    public User getUser(String id) {
-        for (User user: users) {
-        }
-    }
+
 }
