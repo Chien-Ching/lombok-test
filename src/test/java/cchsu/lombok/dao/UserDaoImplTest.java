@@ -2,7 +2,6 @@ package cchsu.lombok.dao;
 
 
 import cchsu.lombok.model.User;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,20 +17,21 @@ import static org.junit.Assert.*;
  */
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class UserDaoTest {
+public class UserDaoImplTest {
     @Autowired
-    private UserDao userDao;
+    private UserDaoImpl userDaoImpl;
 
 
     @Test
     public void prepare() {
-        List<User> users = userDao.fetchAll();
+        List<User> users = userDaoImpl.fetchAll();
 
         assertEquals("user1", users.get(0).getName());
 
 //        User user2 = new User();
-//        user1.setName("user2");
-//        user1.setId("user2");
+//        user2.setName("user2");
+//        user2.setId("user2");
+//        assertEquals("user2", user2.getName());
     }
 
 }

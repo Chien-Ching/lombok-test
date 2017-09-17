@@ -29,7 +29,13 @@ dependencies {
 //    compileOnly 'org.projectlombok:lombok:1.16.18'
     // gradle prior 2.12
     provided 'org.projectlombok:lombok:1.16.18'
+    testCompile 'org.projectlombok:lombok:1.16.18'
 
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.6.RELEASE'
+    compile group: 'org.springframework.data', name: 'spring-data-commons', version: '1.13.6.RELEASE'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.196'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
 }

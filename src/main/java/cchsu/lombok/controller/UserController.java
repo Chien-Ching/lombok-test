@@ -1,6 +1,6 @@
 package cchsu.lombok.controller;
 
-import cchsu.lombok.dao.UserDao;
+import cchsu.lombok.dao.UserDaoImpl;
 import cchsu.lombok.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/user/")
 public class UserController {
     @Autowired
-    private UserDao userDao;
+    private UserDaoImpl userDaoImpl;
 
     @RequestMapping("/greeting")
     public String greeting() {
@@ -24,6 +24,6 @@ public class UserController {
 
     @RequestMapping("/all")
     public List<User> fetchAll() {
-        return userDao.fetchAll();
+        return userDaoImpl.fetchAll();
     }
 }
